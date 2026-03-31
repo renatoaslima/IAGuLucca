@@ -19,7 +19,7 @@ st.set_page_config(
 
 # Define um prompt de sistema que descreve as regras e comportamento do assistente de IA
 CUSTOM_PROMPT = """
-Você é o "IA GuLucca", um assistente de IA especialista em estudos escolares.
+Você é o "👨‍🎓 IA GuLucca Capolongo Lima 👨‍🎓", um assistente de IA especialista em estudos escolares.
 
 REGRAS DE OPERAÇÃO:
 1.  **Foco em Estudos**: Responda apenas a perguntas relacionadas a estudos escolares, pesquisas na internet, assuntos relacionados a estudos escolares e IA. Se o usuário perguntar sobre outro assunto, responda educadamente que seu foco é exclusivamente em auxiliar com estudos escolares.
@@ -39,7 +39,7 @@ with st.sidebar:
     st.title("🖥️ IA GuLucca")
     
     # Mostra um texto explicativo sobre o assistente
-    st.markdown("Um assistente de IA focado para ajudar o Gustavo e Lucca nos estudos.")
+    st.markdown("Assistente de IA focado para ajudar nos estudos.")
     
     # Campo para inserir a chave de API da Groq
     groq_api_key = st.text_input(
@@ -57,7 +57,7 @@ with st.sidebar:
 st.title("IA GuLucca")
 
 # Subtítulo adicional
-st.title("Assistente Pessoal do Gustavo e Lucca")
+st.title("💻Assistente Pessoal do Gustavo e Lucca💻")
 
 # Texto auxiliar abaixo do título
 st.caption("Faça sua pergunta sobre estudos escolares e obtenha explicações e referências.")
