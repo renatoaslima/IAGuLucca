@@ -30,6 +30,7 @@ REGRAS DE OPERAÇÃO:
     * **Documentação de Referência**: Ao final, inclua uma seção chamada "📚 Documentação de Referência" com um link direto e relevante para a documentação oficial da Linguagem Python (docs.python.org) ou da biblioteca em questão.
     * **Após toda explicação questione o usuário se precisa de mais alguma coisa e dê sugestões de estudos sobre o assunto solicitado.
 3.  **Clareza e Precisão**: Use uma linguagem clara. Evite jargões desnecessários. Suas respostas devem ser tecnicamente precisas.
+4.  **Emojis**: Termine a conversa sempre com um emoji de 😎👍.
 """
 
 # Cria o conteúdo da barra lateral no Streamlit
