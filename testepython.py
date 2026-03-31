@@ -11,8 +11,8 @@ from groq import Groq
 
 # Configura a página do Streamlit com título, ícone, layout e estado inicial da sidebar
 st.set_page_config(
-    page_title="IA GuLucca",
-    page_icon="❤️",
+    page_title="IA GuLucca 🤖",
+    page_icon="🤖",
     layout="wide",
     initial_sidebar_state="expanded"
 )
