@@ -55,7 +55,7 @@ with st.sidebar:
 
 
 # Título principal do app
-st.title("IA GuLucca")
+st.title("IA GuLucca Capolongo Lima")
 
 # Subtítulo adicional
 st.title("💻Assistente Pessoal do Gustavo e Lucca💻")
