@@ -53,7 +53,7 @@ with st.sidebar:
     
     # Campo para inserir a chave de API da Groq
     ##groq_api_key = st.text_input(
-        "Insira sua API Key Groq", 
+        ##"Insira sua API Key Groq", 
         type="password",
         help="Obtenha sua chave em https://console.groq.com/keys"
     )
