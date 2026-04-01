@@ -52,8 +52,8 @@ with st.sidebar:
     st.markdown("Assistente de IA focado para ajudar nos estudos.")
     
     # Campo para inserir a chave de API da Groq
-    ##groq_api_key = st.text_input(
-        ##"Insira sua API Key Groq", 
+    groq_api_key = st.text_input(
+        "Insira sua API Key Groq", 
         type="password",
         help="Obtenha sua chave em https://console.groq.com/keys"
     )
@@ -85,7 +85,7 @@ for message in st.session_state.messages:
 client = None
 
 # Verifica se o usuário forneceu a chave de API da Groq
-##if groq_api_key:
+if groq_api_key:
     
     try:
         
@@ -99,7 +99,7 @@ client = None
         st.stop()
 
 # Caso não tenha chave, mas já existam mensagens, mostra aviso
-##elif st.session_state.messages:
+elif st.session_state.messages:
      st.warning("Por favor, insira sua API Key da Groq na barra lateral para continuar.")
 
 # Captura a entrada do usuário no chat
