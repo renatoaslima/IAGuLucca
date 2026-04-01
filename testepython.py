@@ -9,6 +9,15 @@ import streamlit as st
 # Importa a classe Groq para se conectar à API da plataforma Groq e acessar o LLM
 from groq import Groq
 
+# O os.environ.get busca a chave no seu sistema (ou no segredo do GitHub)
+api_key = os.environ.get("GROQ_API_KEY")
+
+if not api_key:
+    print("Erro: A chave de API não foi encontrada!")
+else:
+    client = Groq(api_key=api_key)
+    # Prossiga com sua lógica da IA...
+
 # Configura a página do Streamlit com título, ícone, layout e estado inicial da sidebar
 st.set_page_config(
     page_title="IA GuLucca 🤖",
