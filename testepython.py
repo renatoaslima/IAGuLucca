@@ -75,6 +75,18 @@ for message in st.session_state.messages:
 # Inicializa a variável do cliente Groq como None
 client = None
 
+import os
+from groq import Groq
+
+# O os.environ.get busca a chave no seu sistema (ou no segredo do GitHub)
+api_key = os.environ.get("GROQ_API_KEY")
+
+if not api_key:
+    print("Erro: A chave de API não foi encontrada!")
+else:
+    client = Groq(api_key=api_key)
+    # Prossiga com sua lógica da IA...
+
 # Verifica se o usuário forneceu a chave de API da Groq
 if groq_api_key:
     
