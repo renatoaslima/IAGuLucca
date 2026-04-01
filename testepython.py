@@ -38,16 +38,18 @@ with st.sidebar:
     
     # Define o título da barra lateral
     st.title("🖥️ IA GuLucca")
-    
-    # Mostra um texto explicativo sobre o assistente
-    st.markdown("Assistente de IA focado para ajudar nos estudos.")
-    
-    # Campo para inserir a chave de API da Groq
-    groq_api_key = st.text_input(
-        "Insira sua API Key Groq", 
-        type="password",
-        help="Obtenha sua chave em https://console.groq.com/keys"
-    )
+
+    import os
+from groq import Groq
+
+# O os.environ.get busca a chave no seu sistema (ou no segredo do GitHub)
+api_key = os.environ.get("GROQ_API_KEY")
+
+if not api_key:
+    print("Erro: A chave de API não foi encontrada!")
+else:
+    client = Groq(api_key=api_key)
+    # Prossiga com sua lógica da IA...
 
     # Adiciona linhas divisórias e explicações extras na barra lateral
     st.markdown("---")
@@ -74,18 +76,6 @@ for message in st.session_state.messages:
 
 # Inicializa a variável do cliente Groq como None
 client = None
-
-import os
-from groq import Groq
-
-# O os.environ.get busca a chave no seu sistema (ou no segredo do GitHub)
-api_key = os.environ.get("GROQ_API_KEY")
-
-if not api_key:
-    print("Erro: A chave de API não foi encontrada!")
-else:
-    client = Groq(api_key=api_key)
-    # Prossiga com sua lógica da IA...
 
 # Verifica se o usuário forneceu a chave de API da Groq
 if groq_api_key:
